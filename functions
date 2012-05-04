@@ -78,6 +78,11 @@ init_paths() {
 		fi
 	done
 
+	# add homedir bin as first priority
+	if [ -d "$HOME/bin" ];then
+		PATH=$HOME/bin:$PATH
+	fi
+
 	clean_paths
 }
 

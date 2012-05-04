@@ -46,6 +46,14 @@ init_paths() {
 		if [ -d "$sbin_path" ]; then
 			PATH=$sbin_path:$PATH
 		fi
+		local android_platform_path=$HOME/Library/Android.SDK/platform-tools
+		if [ -d "$android_platform_path" ];then
+			PATH=$android_platform_path:$PATH
+		fi
+		local android_tools_path=$HOME/Library/Android.SDK/tools
+		if [ -d "$android_tools_path" ];then
+			PATH=$android_tools_path:$PATH
+		fi
 		local man_path="$i/share/man"
 		if [ -d "$man_path" ]; then
 			MANPATH=$man_path:$MANPATH
@@ -101,6 +109,9 @@ init_aliases() {
 	# ls
 	alias ls-al="ls -al"
 	alias ll="ls -al"
+
+	# gitk
+	alias gitk='gitk --all'
 
 	# subversion related
 	alias svndiff="svn diff -x --ignore-all-space -x --ignore-eol-style | vi -v -"

@@ -326,4 +326,8 @@ clean_paths
 
 # }}}
 
+# autoconf and automake {{{
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
+# }}}
+
 # vim:ts=4:sw=4:noexpandtab:foldmethod=marker:nowrap:

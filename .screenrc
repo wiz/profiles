@@ -27,7 +27,7 @@ escape ^t^t
 # %n        window number
 # %t        window title
 # %c        24H time
-hardstatus alwayslastline "%{= wk} %-w%{=b bw}%n %t%{-}%+w %= %{= wb}%y/%m/%d %c "
+# hardstatus alwayslastline "%{= wk} %-w%{=b bw}%n %t%{-}%+w %= %{= wb}%y/%m/%d %c "
 
 # }}}
 

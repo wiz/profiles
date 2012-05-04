@@ -1,0 +1,42 @@
+window level msgs
+mirc on
+stamp max
+set ENCRYPT_PAD_PUBLIC OFF
+set NO_ASK_NICKNAME ON
+set LASTLOG 99999
+set SHOW_AWAY_ONCE ON
+set FLOOD_AFTER 0
+set FLOOD_RATE 0
+set FLOOD_USERS 0
+set FLOOD_WARNING OFF
+bind ^K nothing
+bind META1-0 PARSE_COMMAND ^window swap 10
+bind META1-! PARSE_COMMAND ^window swap 11
+bind META1-" PARSE_COMMAND ^window swap 12
+bind META1-# PARSE_COMMAND ^window swap 13
+bind META1-$ PARSE_COMMAND ^window swap 14
+bind META1-% PARSE_COMMAND ^window swap 15
+bind META1-& PARSE_COMMAND ^window swap 16
+bind META1-' PARSE_COMMAND ^window swap 17
+bind META1-( PARSE_COMMAND ^window swap 18
+bind META1-) PARSE_COMMAND ^window swap 19
+alias q query
+alias jj {
+    window bind $0
+    join $0 $1
+}
+alias pp {
+    window unbind $C
+    part $C
+}
+alias jjj {
+    if ([$0]==[]) {
+       echo need channel name
+    }
+    {
+       window new bind $0
+       join $0 $1
+       window hide
+       window swap last
+    }
+}

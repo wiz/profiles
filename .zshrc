@@ -69,8 +69,8 @@ setopt no_beep
 # Enable expansion from {a-c} to a b c.
 setopt brace_ccl
 
-# Enable spell check.
-setopt correct
+# Disable spell check.
+# setopt correct
 
 # Expand =command to the path of the command.
 setopt equals
@@ -82,7 +82,7 @@ setopt extended_glob
 setopt no_flow_control
 
 # Don't send SIGHUP to background jobs when shell exits.
-setopt no_hup
+# setopt no_hup
 
 # Disable C-d to exit shell.
 #setopt ignore_eof
@@ -112,13 +112,16 @@ setopt numeric_glob_sort
 setopt print_eightbit
 
 # Show exit code if exits non 0.
-#setopt print_exit_value
+# setopt print_exit_value
 
 # Don't push multiple copies of the same directory onto the directory stack.
 setopt pushd_ignore_dups
 
 # Use single-line command line editing instead of multi-line.
 #setopt single_line_zle
+
+# Allow comments typed on command line.
+setopt interactive_comments
 
 # Print commands and their arguments as they are executed.
 #setopt xtrace
@@ -134,6 +137,9 @@ setopt auto_pushd
 
 # Don't report the status of background and suspended jobs.
 setopt no_check_jobs
+
+# for ** and other advanced expansions
+setopt extended_glob
 
 # Enable predict completion
 #autoload -Uz predict-on
@@ -204,14 +210,14 @@ fi
 
 ## Zsh History {{{
 
-# Save history on the file.
-HISTFILE="${HOME}"/.zsh-history
+# Don't save history in file
+unset HISTFILE
 
-# Max history in the memory.
+# Max history in memory.
 HISTSIZE=100000
 
-# Max history.
-SAVEHIST=1000000
+# Max history on disk.
+SAVEHIST=0
 
 # Remove command lines from the history list when the first character on the line is a space.
 setopt hist_ignore_space
@@ -220,19 +226,19 @@ setopt hist_ignore_space
 setopt hist_no_store
 
 # Read new commands from the history and your typed commands to be appended to the history file.
-setopt share_history
+#setopt share_history
 
 # Append the history list to the history file for mutiple Zsh sessions.
-setopt append_history
+#setopt append_history
 
 # Save each command's beginning timestamp.
-setopt extended_history
+#setopt extended_history
 
 # Don't add duplicates.
 setopt hist_ignore_dups
 
-# Don't execute the line directly from the history.
-setopt hist_verify
+# Don't require confirmation of !$ etc.
+unsetopt hist_verify
 
 # Seach history.
 autoload -Uz history-search-end

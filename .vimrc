@@ -126,7 +126,7 @@ set fileformats=unix,dos,mac
 " Search
 
 " Ignore the case of normal letters
-set ignorecase
+"set ignorecase
 " If the search pattern contains uppter case characters, override the 'ignorecase' option.
 set smartcase
 " Use incremental search.

@@ -140,11 +140,13 @@ set wrapscan
 " Tab and spaces
 
 " Number of spaces that a <Tab> in the file counts for.
-set tabstop=2
+set tabstop=4
 " Number of spaces to use for each step of indent.
-set shiftwidth=2
+set shiftwidth=4
+" Number of sts
+set softtabstop=4
 " Expand tab to spaces.
-set expandtab
+set noexpandtab
 " Smart autoindenting.
 set autoindent
 set smartindent

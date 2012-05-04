@@ -1,3 +1,0 @@
-set mbox_type=Maildir
-set folder=~/Maildir
-set spoolfile=~/Maildir

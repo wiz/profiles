@@ -210,9 +210,9 @@ set wildmode=longest,list,full
 " Use the popup menu even if it has only one match.
 set completeopt=menuone
 
-" I don't want to use backup files.
-set nobackup
-set noswapfile
+" I *do* want to use backup files.
+set backup
+set swapfile
 
 " Hide buffer when it is abandoned.
 set hidden
@@ -224,8 +224,8 @@ set history=100
 set ttyfast
 
 " Indicate tab, wrap, trailing spaces and eol or not.
-set list
-"set nolist
+"set list
+set nolist
 set listchars=tab:»\ ,extends:»,precedes:«,trail:\ 
 augroup MyAutoCommands
   "autocmd VimEnter,ColorScheme * highlight SpecialKey ctermbg=red guibg=#F92672
@@ -489,9 +489,9 @@ nnoremap # #zzzv
 nnoremap g* g*zzzv
 nnoremap g# g#zzzv
 
-" Run EX commands
-nnoremap ; q:i
-nnoremap : q:i
+" Use command line window or not
+"nnoremap ; q:i
+"nnoremap : q:i
 "{{{
 "autocmd MyAutoCommands CmdwinEnter * nnoremap <buffer> <ESC> :<C-u>quit<CR>
 

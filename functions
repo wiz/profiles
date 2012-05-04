@@ -110,6 +110,9 @@ init_aliases() {
 	alias ls-al="ls -al"
 	alias ll="ls -al"
 
+	# screen
+	alias sr='screen -r'
+
 	# gitk
 	alias gitk='gitk --all'
 

@@ -1,0 +1,6 @@
+#!/bin/zsh
+# fixperms by J. Maurice <j@wiz.biz>
+# make non-public files public
+find . -type d -perm -u+rx -exec chmod go+rx {} \;
+find . -type f -perm -u+rx -exec chmod go+rx {} \;
+find . -type f -perm -u+rw -exec chmod go+r {} \;

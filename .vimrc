@@ -210,8 +210,8 @@ set wildmode=longest,list,full
 " Use the popup menu even if it has only one match.
 set completeopt=menuone
 
-" I *do* want to use backup files.
-set backup
+" I don't want to use backup files, but I *do* want swapfiles.
+set nobackup
 set swapfile
 
 " Hide buffer when it is abandoned.

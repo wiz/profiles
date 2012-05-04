@@ -113,9 +113,6 @@ init_aliases() {
 	# gitk
 	alias gitk='gitk --all'
 
-	# whois for .jp domain names
-	alias whois='whois $* | iconv -f iso-2022-jp -t utf-8'
-
 	# subversion related
 	alias svndiff="svn diff -x --ignore-all-space -x --ignore-eol-style | vi -v -"
 	alias svndiffd="svn diff -x --ignore-all-space -x --ignore-eol-style -r \"{\`date -v-1d +%Y%m%d\`}\" | vi -v -"

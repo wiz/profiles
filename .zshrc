@@ -330,4 +330,15 @@ clean_paths
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 # }}}
 
+# whois method for .jp domain names {{{
+whois() {
+	if echo "$1" | grep '\.jp$' > /dev/null 2>&1
+	then
+		=whois $* | iconv -f iso-2022-jp -t utf-8
+	else
+		=whois $*
+	fi
+}
+# }}}
+
 # vim:ts=4:sw=4:noexpandtab:foldmethod=marker:nowrap:

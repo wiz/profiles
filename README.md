@@ -1,7 +1,8 @@
 Profiles
 ========
 
-This repository includes configration files, scripts and tiny commands for our daily life, especially for myself.
+This repository includes configuration files, plugins, and add-on scripts for zsh, vim, and other stuff I use.
+This collection is based off niw's repo: https://github.com/niw/profiles
 
 License
 =======
@@ -9,20 +10,16 @@ License
 These files inside this repository is under MIT License, see MIT-LICENSE.txt.
 This repository also contains some third party scripts, files and commands so that I and you can use it easily though, these files are NOT under this license but under each licenses.
 
-Install
+Setup
 =======
 
-Following next step to use this configration files.
-
-    % git clone git://github.com/niw/profiles.git ~/.profiles
+    % git clone git://github.com/jmaurice/profiles.git ~/.profiles
     % cd ~/.profiles
     % git submodule init
     % git submodule update
-    % ./setup
+	% cd ~/
+	% ln -s .profiles/.zshrc
+	% ln -s .profiles/.vimrc
+	% ln -s .profiles/.vim
 
-Uninstall
-=========
-
-Using setup command, you can remove all symlinks to the configuration files located in ~/.
-
-    % ~/.profiles/setup --uninstall
+	make other symlinks etc. as needed

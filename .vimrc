@@ -1,5 +1,6 @@
 " .vimrc
-" http://github.com/niw/profiles
+" modified by jmaurice at http://github.com/jmaurice/profiles
+" forked from niw's repo at http://github.com/niw/profiles
 
 "{{{ Initialize
 
@@ -154,6 +155,7 @@ set smartindent
 set shiftround
 " Enable modeline.
 set modeline
+set modelines=3
 " Disable auto wrap.
 autocmd MyAutoCommands FileType * setlocal textwidth=0
 

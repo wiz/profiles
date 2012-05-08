@@ -1,3 +1,6 @@
+# set umask first
+umask 77
+
 # location of our git repo
 profiles=~/.profiles
 

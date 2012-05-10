@@ -747,10 +747,10 @@ function! s:RestoreBinaryForNoeol()
   endif
 endfunction
 
-augroup MyAutoCommands
-  autocmd BufWritePre  * call <SID>SetBinaryForNoeol()
-  autocmd BufWritePost * call <SID>RestoreBinaryForNoeol()
-augroup END
+" augroup MyAutoCommands
+"   autocmd BufWritePre  * call <SID>SetBinaryForNoeol()
+"   autocmd BufWritePost * call <SID>RestoreBinaryForNoeol()
+" augroup END
 "}}}
 
 " Remove tailing spaces.

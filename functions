@@ -61,22 +61,22 @@ init_paths() {
 	done
 
 	# /opt/(symlink)/bin, /usr/local/(symlink)/bin
-	for i in /usr/local/* /opt/*; do
-		if [ -L "$i" ]; then
-			local bin_path="$i/bin"
-			if [ -d "$bin_path" ]; then
-				PATH=$bin_path:$PATH
-			fi
-			local sbin_path="$i/sbin"
-			if [ -d "$sbin_path" ]; then
-				PATH=$sbin_path:$PATH
-			fi
-			local man_path="$i/share/man"
-			if [ -d "$man_path" ]; then
-				MANPATH=$man_path:$MANPATH
-			fi
-		fi
-	done
+#	for i in /usr/local/* /opt/*; do
+#		if [ -L "$i" ]; then
+#			local bin_path="$i/bin"
+#			if [ -d "$bin_path" ]; then
+#				PATH=$bin_path:$PATH
+#			fi
+#			local sbin_path="$i/sbin"
+#			if [ -d "$sbin_path" ]; then
+#				PATH=$sbin_path:$PATH
+#			fi
+#			local man_path="$i/share/man"
+#			if [ -d "$man_path" ]; then
+#				MANPATH=$man_path:$MANPATH
+#			fi
+#		fi
+#	done
 
 	# add homedir bin as first priority
 	if [ -d "$HOME/bin" ];then

@@ -13,7 +13,7 @@ source "${profiles}/functions"
 ## Pre Configurations {{{
 
 # Avoid 'no matches found' error.
-setopt nullglob
+unsetopt nullglob
 
 # Add PATH and MAN_PATH.
 init_paths

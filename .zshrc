@@ -73,7 +73,7 @@ setopt no_beep
 setopt brace_ccl
 
 # Disable spell check.
-# setopt correct
+unsetopt correct
 
 # Expand =command to the path of the command.
 setopt equals
@@ -85,10 +85,10 @@ setopt extended_glob
 setopt no_flow_control
 
 # Don't send SIGHUP to background jobs when shell exits.
-# setopt no_hup
+unsetopt no_hup
 
 # Disable C-d to exit shell.
-#setopt ignore_eof
+unsetopt ignore_eof
 
 # Show long list for jobs command.
 setopt long_list_jobs
@@ -100,7 +100,7 @@ setopt magic_equal_subst
 setopt mark_dirs
 
 # Don't show the list for completions.
-#setopt no_auto_menu
+unsetopt no_auto_menu
 
 # Don't show completions when using *.
 setopt glob_complete
@@ -115,19 +115,19 @@ setopt numeric_glob_sort
 setopt print_eightbit
 
 # Show exit code if exits non 0.
-# setopt print_exit_value
+unsetopt print_exit_value
 
 # Don't push multiple copies of the same directory onto the directory stack.
 setopt pushd_ignore_dups
 
 # Use single-line command line editing instead of multi-line.
-#setopt single_line_zle
+unsetopt single_line_zle
 
 # Allow comments typed on command line.
 setopt interactive_comments
 
 # Print commands and their arguments as they are executed.
-#setopt xtrace
+unsetopt xtrace
 
 # Show CR if the prompt doesn't end with CR.
 unsetopt promptcr
@@ -229,13 +229,13 @@ setopt hist_ignore_space
 setopt hist_no_store
 
 # Read new commands from the history and your typed commands to be appended to the history file.
-#setopt share_history
+unsetopt share_history
 
 # Append the history list to the history file for mutiple Zsh sessions.
-#setopt append_history
+unsetopt append_history
 
 # Save each command's beginning timestamp.
-#setopt extended_history
+unsetopt extended_history
 
 # Don't add duplicates.
 setopt hist_ignore_dups

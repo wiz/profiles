@@ -21,5 +21,7 @@ Setup
 	% ln -s .profiles/.zshrc
 	% ln -s .profiles/.vimrc
 	% ln -s .profiles/.vim
+	% cp .profiles/site-functions/* /usr/share/zsh/site-functions/
+	### if not root then uncomment adding .profiles/site-functions to $fpath in .zshrc
 
 	make other symlinks etc. as needed

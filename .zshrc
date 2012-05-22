@@ -5,7 +5,7 @@ umask 77
 profiles=~/.profiles
 
 # add local .zfunc to fpath
-fpath+="${profiles}/.zfunc"
+# fpath+="${profiles}/site-functions"
 
 # source other functions
 source "${profiles}/functions"

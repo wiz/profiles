@@ -36,8 +36,8 @@ init_paths() {
 		eval `/usr/libexec/path_helper -s`
 	fi
 
-	# /opt/local/bin, /usr/local/bin
-	for i in /usr/local /opt/local; do
+	# standard paths
+	for i in '' /usr /usr/local /opt/local;do
 		local bin_path="$i/bin"
 		if [ -d "$bin_path" ]; then
 			PATH=$bin_path:$PATH

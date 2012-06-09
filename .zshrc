@@ -1,6 +1,10 @@
 # set umask first
 umask 77
 
+# locale/encoding
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # location of our git repo
 profiles=~/.profiles
 

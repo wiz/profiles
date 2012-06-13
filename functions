@@ -116,6 +116,13 @@ init_aliases() {
 	alias ls-al="ls -al"
 	alias ll="ls -al"
 
+	# os x mysql port
+	if which mysql5 >/dev/null 2>&1 && ! which mysql >/dev/null 2>&1;then
+		alias mysql=mysql5
+		alias mysqldump=mysqldump5
+		alias mysqladmin=mysqladmin5
+	fi
+
 	# screen
 	alias sr='screen -r'
 

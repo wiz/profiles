@@ -1,0 +1,4 @@
+#!/bin/zsh
+sudo kextunload /System/Library/Extensions/IONetworkingFamily.kext/Contents/PlugIns/AppleUSBEthernet.kext
+sleep 5
+sudo kextload /System/Library/Extensions/IONetworkingFamily.kext/Contents/PlugIns/AppleUSBEthernet.kext

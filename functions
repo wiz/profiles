@@ -147,6 +147,9 @@ init_aliases() {
 
 	alias ge="grepedit"
 
+	# for testing an https webserver
+	alias stelnet='openssl s_client -connect'
+
 	# git related
 	alias d="git diff"
 	alias dc="git diff --cached"

@@ -1,4 +1,12 @@
 #!/bin/zsh
+echo 'unplug ethernet'
+read
+sleep 1
 sudo kextunload /System/Library/Extensions/IONetworkingFamily.kext/Contents/PlugIns/AppleUSBEthernet.kext
-sleep 5
+sleep 3
+echo 'plug in ethernet'
+read
+sleep 1
 sudo kextload /System/Library/Extensions/IONetworkingFamily.kext/Contents/PlugIns/AppleUSBEthernet.kext
+sleep 2
+ifconfig -a

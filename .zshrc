@@ -8,8 +8,8 @@ export LANG=en_US.UTF-8
 # location of our git repo
 profiles=~/.profiles
 
-# add local .zfunc to fpath
-# fpath+="${profiles}/site-functions"
+# if local installation, uncomment this line to add zsh-git functions to fpath
+# fpath+="${profiles}/zsh-git/functions"
 
 # source other functions
 source "${profiles}/functions"

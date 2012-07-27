@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 if [[ $OSTYPE != darwin* ]]; then
   sudo gdb --batch -ex bt --ex detach --pid $1

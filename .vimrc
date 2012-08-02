@@ -659,6 +659,9 @@ command! -nargs=+ Ack call <SID>Grep('ack', <f-args>)
 " Change file name editing
 command! -nargs=1 -complete=file Rename file <args>|call delete(expand('#'))
 
+" Coffee script go-to-line
+command -nargs=1 C CoffeeCompile vertical | :<args>
+
 " Preserve window splits when deleting the buffer
 "{{{
 function! s:DeleteBuffer(bang) "{{{

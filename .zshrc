@@ -312,7 +312,7 @@ esac
 ## Scan Additonal Configurations {{{
 
 setopt no_nomatch
-init_additionl_configration "*.zsh"
+#init_additionl_configration "*.zsh"
 
 # }}}
 

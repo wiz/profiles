@@ -1,5 +1,5 @@
 # set umask first
-umask 77
+umask 22
 
 # locale/encoding
 export LC_ALL=en_US.UTF-8

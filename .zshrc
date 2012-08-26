@@ -5,6 +5,9 @@ umask 22
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# timezone
+export TZ=Asia/Tokyo
+
 # location of our git repo
 profiles=~/.profiles
 

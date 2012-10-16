@@ -1,18 +1,13 @@
 -- {{{ Main
 theme = {}
 theme.wallpaper_cmd = {
---	"awsetbg /usr/local/share/awesome/themes/leet/leet-background1.jpg",
---	"awsetbg /usr/local/share/awesome/themes/leet/leet-background2.jpg",
---	"awsetbg /usr/local/share/awesome/themes/leet/leet-background3.jpg",
---	"awsetbg /usr/local/share/awesome/themes/leet/leet-background4.jpg",
+--	"awsetbg /usr/local/share/awesome/themes/leet/pengi-background-2560x1600.png",
+--	"awsetbg /usr/local/share/awesome/themes/leet/pengi-background-1200x1600.png",
 	"awsetbg /usr/local/share/awesome/themes/leet/black.png",
 	"awsetbg /usr/local/share/awesome/themes/leet/black.png",
-	"awsetbg /usr/local/share/awesome/themes/leet/black.png",
-	"awsetbg /usr/local/share/awesome/themes/leet/black.png",
---	"xsetroot -solid black -display :0.0",
---	"xsetroot -solid black -display :0.1",
---	"xsetroot -solid black -display :0.2",
---	"xsetroot -solid black -display :0.3"
+	"awsetbg /usr/local/share/awesome/themes/leet/pengi-background-1200x1600.png",
+	"awsetbg /usr/local/share/awesome/themes/leet/pengi-background-1600x1200.png",
+	"awsetbg /usr/local/share/awesome/themes/leet/pengi-background-color.png",
 }
 -- }}}
 
@@ -29,7 +24,7 @@ theme.bg_urgent = "#3F3F3F"
 -- }}}
 
 -- {{{ Borders
-theme.border_width  = "0"
+theme.border_width  = "1"
 theme.border_normal = "#0F0F0F"
 theme.border_focus  = "#3F3F3F"
 theme.border_marked = "#CC9393"

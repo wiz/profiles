@@ -1,7 +1,7 @@
 # list users on server, not laptop
 case `uname` in
 	FreeBSD)
-		w -n
+		=w -n
 		;;
 	Darwin)
 		;;
@@ -9,3 +9,9 @@ case `uname` in
 		w
 		;;
 esac
+
+# when logging into desktop, start ssh agent
+if [ `tty` = 'v0' ]; then
+	eval `ssh-agent`
+	ssh-add
+fi

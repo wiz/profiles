@@ -11,7 +11,7 @@ case `uname` in
 esac
 
 # when logging into desktop, start ssh agent
-if [ `tty` = 'v0' ]; then
+if [ `tty` = '/dev/ttyv0' ]; then
 	eval `ssh-agent`
 	ssh-add
 fi

@@ -225,6 +225,9 @@ globalkeys = awful.util.table.join(
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
+    awful.key({ modkey,           }, "F10", function () awful.util.spawn("mixer vol 0") end),
+    awful.key({ modkey,           }, "F11", function () awful.util.spawn("mixer vol -4") end),
+    awful.key({ modkey,           }, "F12", function () awful.util.spawn("mixer vol +4") end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
@@ -269,7 +272,42 @@ clientkeys = awful.util.table.join(
         function (c)
             c.maximized_horizontal = not c.maximized_horizontal
             c.maximized_vertical   = not c.maximized_vertical
-        end)
+        end),
+	-- Move floating window with arrow keys
+	awful.key({ modkey }, "Left",
+		function ()
+			awful.client.moveresize(-20, 0, 0, 0)
+		end),
+	awful.key({ modkey }, "Right",
+		function ()
+			awful.client.moveresize(20, 0, 0, 0)
+		end),
+	awful.key({ modkey }, "Up",
+		function ()
+			awful.client.moveresize(0, -20, 0, 0)
+		end),
+	awful.key({ modkey }, "Down",
+		function ()
+			awful.client.moveresize(0, 20, 0, 0)
+		end),
+	-- Resize window with arrow keys
+	awful.key({ modkey, "Control" }, "Left",
+		function ()
+			awful.client.moveresize(0, 0, -20, 0)
+		end),
+	awful.key({ modkey, "Control" }, "Right",
+		function ()
+			awful.client.moveresize(0, 0, 20, 0)
+		end),
+	awful.key({ modkey, "Control" }, "Up",
+		function ()
+			awful.client.moveresize(0, 0, 0, -20)
+		end),
+	awful.key({ modkey, "Control" }, "Down",
+		function ()
+			awful.client.moveresize(0, 0, 0, 20)
+		end)
+	----------------------------------------
 )
 
 -- Compute the maximum number of digit we need, limited to 9

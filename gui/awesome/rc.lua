@@ -225,9 +225,9 @@ globalkeys = awful.util.table.join(
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
-    awful.key({ modkey,           }, "F10", function () awful.util.spawn("mixer vol 0") end),
-    awful.key({ modkey,           }, "F11", function () awful.util.spawn("mixer vol -4") end),
-    awful.key({ modkey,           }, "F12", function () awful.util.spawn("mixer vol +4") end),
+    awful.key({ modkey,           }, "F10", function () awful.util.spawn("mixer vol 5 &") end),
+    awful.key({ modkey,           }, "F11", function () awful.util.spawn("mixer vol -5 &") end),
+    awful.key({ modkey,           }, "F12", function () awful.util.spawn("mixer vol +5 &") end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
@@ -364,6 +364,7 @@ awful.rules.rules = {
     { rule = { },
       properties = { border_width = beautiful.border_width,
                      border_color = beautiful.border_normal,
+					 size_hints_honor = false,
                      focus = true,
                      keys = clientkeys,
                      buttons = clientbuttons } },
@@ -372,6 +373,8 @@ awful.rules.rules = {
     { rule = { class = "pinentry" },
       properties = { floating = true } },
     { rule = { class = "gimp" },
+      properties = { floating = true } },
+    { rule = { class = "vlc" },
       properties = { floating = true } },
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },

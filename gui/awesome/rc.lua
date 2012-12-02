@@ -38,6 +38,9 @@ beautiful.init("/usr/local/share/awesome/themes/leet/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "terminator"
+opera = "opera"
+chrome = "chrome"
+vlc = "vlc /home/jmaurice/Music"
 editor = os.getenv("EDITOR") or "vi"
 editor_cmd = terminal .. " -x " .. editor
 
@@ -80,12 +83,17 @@ end
 myawesomemenu = {
    { "manual", terminal .. " -e man awesome" },
    { "edit config", editor_cmd .. " " .. awesome.conffile },
+   { "", awesome.restart },
    { "restart", awesome.restart },
+   { "", awesome.restart },
    { "quit", awesome.quit }
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
+                                    { "terminal", terminal },
+                                    { "vlc", vlc },
+                                    { "opera", opera },
+                                    { "chrome", chrome }
                                   }
                         })
 

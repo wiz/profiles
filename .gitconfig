@@ -1,17 +1,16 @@
 [user]
 	name = J. Maurice
 	email = j@wiz.biz
+
 [alias]
-	ci = commit
-	cia = commit -a
-	co = checkout
-	st = status
-	sta = status -a
-	br = branch
-	bra = branch -a
-	sm = submodule
-	gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
-	d = diff -w
+  ci = commit
+  co = checkout
+  st = status
+  br = branch
+  sm = submodule
+  gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+  d = diff -w
+
 [color]
 	diff = auto
 	status = auto
@@ -21,3 +20,25 @@
 	fontdiff = -family Osaka−等幅 -size 12 -weight normal -slant roman -underline 0 -overstrike 0
 [branch]
 	autosetuprebase = always
+
+[mergetool]
+  keepBackup = true
+
+# tig Configurations
+# See man tigrc(5).
+[tig]
+  #line-graphics = ascii
+  tab-size = 4
+[tig "bind"]
+  # Disable default G mapping to git gc.
+  generic = G none
+  # Keybindings like vim.
+  generic = g move-first-line
+  generic = G move-last-line
+  generic = ^b move-page-up
+  generic = ^f move-page-down
+[tig "color"]
+  cursor = default black
+  date = white default
+  title-focus = white black
+  title-blur = black white

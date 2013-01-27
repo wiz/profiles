@@ -266,8 +266,9 @@ init_aliases() {
 	alias s="git status"
 	alias a="git add"
 	alias grf="git remote -v|cut -f1|sort|uniq|xargs -n 1 git fetch"
-	alias gpoh="git push origin HEAD"
 	alias gb="git symbolic-ref HEAD|cut -d'/' -f3"
+	alias gpoh="git push origin HEAD"
+	alias gpodh="git push origin :\$(git symbolic-ref HEAD|cut -d"/" -f3)"
 
 	alias now="date +%Y%m%d%H%M%S"
 	alias wget="wget -U Mozilla --no-check-certificate"
@@ -324,7 +325,7 @@ init_rubies() {
 }
 
 init_locallib() {
-	if [ -s "/Users/niw/.perl5/lib/perl5/local/lib.pm" ]; then
+	if [ -s "$HOME/.perl5/lib/perl5/local/lib.pm" ]; then
 		eval $(perl -I$HOME/.perl5/lib/perl5 -Mlocal::lib=$HOME/.perl5)
 		return 0
 	fi

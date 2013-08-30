@@ -201,8 +201,10 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
-    awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
-    awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
+    -- awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
+    -- awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
+    awful.key({ modkey,           }, "Left", function () awful.screen.focus_relative( 1) end),
+    awful.key({ modkey,           }, "Right", function () awful.screen.focus_relative(-1) end),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
 
     awful.key({ modkey,           }, "j",
@@ -327,15 +329,19 @@ end
 -- Bind all key numbers to tags.
 -- Be careful: we use keycodes to make it works on any keyboard layout.
 -- This should map on the top row of your keyboard, usually 1 to 9.
-for i = 1, keynumber do
+for i = 1, screen.count() do
     globalkeys = awful.util.table.join(globalkeys,
         awful.key({ modkey }, "#" .. i + 9,
                   function ()
-                        local screen = mouse.screen
-                        if tags[screen][i] then
-                            awful.tag.viewonly(tags[screen][i])
-                        end
-                  end),
+					  if i == 1 then awful.screen.focus(2) end
+					  if i == 2 then awful.screen.focus(1) end
+					  if i == 3 then awful.screen.focus(3) end
+					  if i == 4 then awful.screen.focus(5) end
+					  if i == 5 then awful.screen.focus(4) end
+                  end))
+end
+for i = 1, keynumber do
+    globalkeys = awful.util.table.join(globalkeys,
         awful.key({ modkey, "Control" }, "#" .. i + 9,
                   function ()
                       local screen = mouse.screen

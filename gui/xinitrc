@@ -56,11 +56,12 @@ xcompmgr -d :0.2 &
 xcompmgr -d :0.3 &
 xcompmgr -d :0.4 &
 
-terminator --display :0.0 &
-terminator --display :0.1 &
-terminator --display :0.3 &
-terminator --display :0.4 &
+#terminator --display :0.0 &
+#chrome --display :0.2 &
 
-chrome --display :0.2 &
+DISPLAY=:0.1 awesome &
+DISPLAY=:0.2 awesome &
+DISPLAY=:0.3 awesome &
+DISPLAY=:0.4 awesome &
 
 exec ck-launch-session dbus-launch awesome

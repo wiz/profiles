@@ -40,8 +40,8 @@ beautiful.init("/usr/local/share/awesome/themes/leet/theme.lua")
 terminal = "terminator"
 opera = "opera"
 chrome = "chrome"
-vlc = "vlc /home/jmaurice/Music"
-editor = os.getenv("EDITOR") or "vi"
+vlc = "vlc -I luaintf --lua-intf http /home/jmaurice/Music"
+editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -x " .. editor
 
 -- Default modkey.
@@ -235,9 +235,13 @@ globalkeys = awful.util.table.join(
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
-    awful.key({ modkey,           }, "F10", function () awful.util.spawn("mixer vol 5 &") end),
-    awful.key({ modkey,           }, "F11", function () awful.util.spawn("mixer vol -5 &") end),
-    awful.key({ modkey,           }, "F12", function () awful.util.spawn("mixer vol +5 &") end),
+    awful.key({ modkey,           }, "F6", function () awful.util.spawn_with_shell("xscreensaver-command -lock") end),
+    awful.key({ modkey,           }, "F7", function () awful.util.spawn_with_shell("dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.vlc --type=method_call /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous") end),
+    awful.key({ modkey,           }, "F8", function () awful.util.spawn_with_shell("dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.vlc --type=method_call /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause") end),
+    awful.key({ modkey,           }, "F9", function () awful.util.spawn_with_shell("dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.vlc --type=method_call /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next") end),
+    awful.key({ modkey,           }, "F10", function () awful.util.spawn_with_shell("mixer vol 5 &") end),
+    awful.key({ modkey,           }, "F11", function () awful.util.spawn_with_shell("mixer vol -5 &") end),
+    awful.key({ modkey,           }, "F12", function () awful.util.spawn_with_shell("mixer vol +5 &") end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 

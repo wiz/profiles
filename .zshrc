@@ -4,6 +4,8 @@ umask 22
 # locale/encoding
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export LC_ALL=ja_JP.UTF-8
+export LANG=ja_JP.UTF-8
 
 # go for 256 color as long as not physical console
 [ `tty` != '/dev/ttyv0' ] && export TERM=xterm-256color

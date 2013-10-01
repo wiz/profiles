@@ -16,7 +16,7 @@
 	status = auto
 	branch = auto
 [gui]
-	fontui = -family \"ヒラギノ角ゴ Pro W3\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+	fontui = -family \"Droid Sans Fallback\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family Osaka−等幅 -size 12 -weight normal -slant roman -underline 0 -overstrike 0
 [branch]
 	autosetuprebase = always

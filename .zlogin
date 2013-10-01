@@ -11,7 +11,7 @@ case `uname` in
 esac
 
 # when logging into desktop, start ssh agent
-if [ `tty` = '/dev/ttyv0' ]; then
+if [ `hostname` = 'j.local' ] && [ `tty` = '/dev/ttyv0' ]; then
 	mixer vol 20
 	eval `ssh-agent`
 	ssh-add

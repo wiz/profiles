@@ -43,24 +43,13 @@ export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 ibus-daemon --daemonize --xim
 sleep 1
-#export XIM=ibus
-#export GTK_IM_MODULE=ibus
-#export QT_IM_MODULE=xim
-#export XMODIFIERS=@im=ibus
-#export XIM_PROGRAM="ibus-daemon"
-#export XIM_ARGS="--daemonize --xim"
+export XIM=ibus
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=xim
+export XMODIFIERS=@im=ibus
+export XIM_PROGRAM="ibus-daemon"
+export XIM_ARGS="--daemonize --xim"
 
-xcompmgr -d :0.0 &
-xcompmgr -d :0.1 &
-xcompmgr -d :0.2 &
-xcompmgr -d :0.3 &
-xcompmgr -d :0.4 &
-
-terminator --display :0.0 &
-terminator --display :0.1 &
-terminator --display :0.3 &
-terminator --display :0.4 &
-
-chrome --display :0.2 &
+xscreensaver -no-splash &
 
 exec ck-launch-session dbus-launch awesome

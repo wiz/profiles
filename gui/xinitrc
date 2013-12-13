@@ -52,4 +52,7 @@ export XIM_ARGS="--daemonize --xim"
 
 xscreensaver -no-splash &
 
+xrandr --screen 1 -o right
+xrandr --screen 2 -o left
+
 exec ck-launch-session dbus-launch awesome

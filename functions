@@ -271,7 +271,7 @@ init_aliases() {
 	alias gpodh="git push origin :\$(git symbolic-ref HEAD|cut -d"/" -f3)"
 
 	alias now="date +%Y%m%d%H%M%S"
-	alias wget="wget -U Mozilla --no-check-certificate"
+	alias wget="wget --ca-certificate=/usr/local/share/certs/ca-root-nss.crt"
 	alias fn="find . -not -ipath '*/tmp/*' -not -ipath '*/.*/*' -name "
 	alias rand="ruby -ropenssl -e 'print OpenSSL::Digest::SHA1.hexdigest(rand().to_s)'"
 

@@ -37,7 +37,7 @@ init_paths() {
 	fi
 
 	# standard paths
-	for i in '' /usr /usr/local /opt/local;do
+	for i in '' /usr /usr/local /usr/local/opt /opt/local;do
 		local bin_path="$i/bin"
 		if [ -d "$bin_path" ]; then
 			PATH=$bin_path:$PATH
@@ -45,6 +45,10 @@ init_paths() {
 		local sbin_path="$i/sbin"
 		if [ -d "$sbin_path" ]; then
 			PATH=$sbin_path:$PATH
+		fi
+		local gcloud_platform_path=$HOME/google-cloud-sdk
+		if [ -d "$gcloud_platform_path" ];then
+			PATH=$gcloud_platform_path/bin/:$PATH
 		fi
 		local android_platform_path=$HOME/Library/Android.SDK/platform-tools
 		if [ -d "$android_platform_path" ];then
@@ -258,7 +262,7 @@ init_aliases() {
 	alias ge="grepedit"
 
 	# for testing an https webserver
-	alias stelnet='openssl s_client -connect'
+	alias stelnet='openssl s_client -CAfile /etc/ssl/certs/ca-certificates.crt -connect'
 
 	# git related
 	alias d="git diff"

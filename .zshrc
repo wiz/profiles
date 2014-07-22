@@ -7,6 +7,9 @@ export LANG=en_US.UTF-8
 export LC_ALL=ja_JP.UTF-8
 export LANG=ja_JP.UTF-8
 
+export ANDROID_HOME=$HOME/Library/Android.SDK
+export GOPATH=$HOME/Development/go
+
 # go for 256 color as long as not physical console
 [ `tty` != '/dev/ttyv0' ] && export TERM=xterm-256color
 
@@ -355,3 +358,9 @@ whois() {
 # }}}
 
 # vim:ts=4:sw=4:noexpandtab:foldmethod=marker:nowrap:
+
+# The next line updates PATH for the Google Cloud SDK.
+source /Users/jmaurice/google-cloud-sdk/path.bash.inc
+
+# The next line enables zsh completion for gcloud.
+#source /Users/jmaurice/google-cloud-sdk/completion.zsh.inc

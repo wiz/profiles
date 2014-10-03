@@ -37,7 +37,7 @@ init_paths() {
 	fi
 
 	# standard paths
-	for i in '' /usr /usr/local /usr/local/opt /opt/local;do
+	for i in '' /usr /usr/local /usr/local/opt /opt/local /usr/local/MacGPG2;do
 		local bin_path="$i/bin"
 		if [ -d "$bin_path" ]; then
 			PATH=$bin_path:$PATH

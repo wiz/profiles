@@ -357,16 +357,16 @@ whois() {
 }
 # }}}
 
-# vim:ts=4:sw=4:noexpandtab:foldmethod=marker:nowrap:
-
 # The next line updates PATH for the Google Cloud SDK.
 #source /Users/jmaurice/google-cloud-sdk/path.bash.inc
 
 # The next line enables zsh completion for gcloud.
 #source /Users/jmaurice/google-cloud-sdk/completion.zsh.inc
 
-export GPG_TTY=$(tty)
-if [ -f "${HOME}/.gpg-agent-info" ]; then
-	. "${HOME}/.gpg-agent-info"
-	export GPG_AGENT_INFO
-fi
+# connect to gpg key agent
+. ${HOME}/.profiles/bin/gpg-agent-startup
+export GPG_AGENT_INFO
+export SSH_AUTH_SOCK
+export SSH_AGENT_PID
+
+# vim:ts=4:sw=4:noexpandtab:foldmethod=marker:nowrap:

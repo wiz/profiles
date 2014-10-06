@@ -25,7 +25,6 @@ source ${GPG_AGENT_INFO_FILE}
 # check if gpg is still running from old file, if not start it again
 GPG_AGENT_PID=`gpg_agent_pid`
 if ! kill -0 ${GPG_AGENT_PID} 2>/dev/null; then
-	echo "starting gpg agent because ${GPG_AGENT_PID} is dead"
 	gpg_agent_start
 fi
 

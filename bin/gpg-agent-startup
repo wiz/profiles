@@ -1,8 +1,32 @@
 # start gpg-agent if not already running
-test -f $HOME/.gpg-agent-info && source $HOME/.gpg-agent-info
-if kill -0 `head -1 $HOME/.gpg-agent-info|cut -d : -f2` 2>/dev/null; then
+GPG_AGENT_INFO_FILE=$HOME/.gpg-agent-info
+
+gpg_agent_start()
+{
 	sleep 0.$RANDOM # hack to avoid race condition
 	eval `/usr/local/MacGPG2/bin/gpg-agent --daemon --write-env-file --enable-ssh-support`
+}
+
+gpg_agent_pid()
+{
+	test -f ${GPG_AGENT_INFO_FILE} || return 1
+	echo `head -1 ${GPG_AGENT_INFO_FILE} | cut -d : -f2`
+}
+
+# start gpg agent if we can't get the pid
+GPG_AGENT_PID=`gpg_agent_pid`
+if [ -z "${GPG_AGENT_PID}" ];then
+	gpg_agent_start
+fi
+
+# try reading gpg info file
+source ${GPG_AGENT_INFO_FILE}
+
+# check if gpg is still running from old file, if not start it again
+GPG_AGENT_PID=`gpg_agent_pid`
+if ! kill -0 ${GPG_AGENT_PID} 2>/dev/null; then
+	echo "starting gpg agent because ${GPG_AGENT_PID} is dead"
+	gpg_agent_start
 fi
 
 # export variables to environment

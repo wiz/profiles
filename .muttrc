@@ -1,0 +1,83 @@
+# basic
+set from = "j@wiz.biz"
+set realname = "J. Maurice"
+
+# gmail
+set imap_user = "j@wiz.biz"
+set smtp_url = "smtp://j@wiz.biz@smtp.gmail.com:587/"
+
+# dont save passwords in git
+#set imap_pass = ""
+#set smtp_pass = ""
+source .muttlogin
+
+# IMAP
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed ="+[Google Mail]/Drafts"
+set trash = "+[Google Mail]/Trash"
+
+# LOCAL FOLDERS FOR CACHED HEADERS AND CERTIFICATES
+set header_cache =~/.mutt/cache/headers
+set message_cachedir =~/.mutt/cache/bodies
+set certificate_file =~/.mutt/certificates
+
+# SECURING
+set move = no  #Stop asking to "move read messages to mbox"!
+set imap_keepalive = 900
+
+bind editor <space> noop
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=[Google Mail]/All Mail<enter>" "Go to all mail"
+macro index gs "<change-folder>=[Google Mail]/Sent Mail<enter>" "Go to Sent Mail"
+macro index gd "<change-folder>=[Google Mail]/Drafts<enter>" "Go to drafts"
+
+# Use GPGME
+set crypt_use_gpgme = yes
+
+# Sign replies to signed email
+set crypt_replysign = yes
+
+# Encrypt replies to encrypted email
+set crypt_replyencrypt = yes
+
+# Encrypt and sign replies to encrypted and signed email
+set crypt_replysignencrypted = yes
+
+# Attempt to verify email signatures automatically
+set crypt_verify_sig = yes
+
+# autosign all mail using my key
+set pgp_sign_as = 0x750C1AC5
+set crypt_autosign = yes
+set crypt_autoencrypt = yes
+# add header to my key
+my_hdr X-PGP-Key: https://wiz.biz/pgp/jmaurice.asc
+
+# colors
+
+color hdrdefault cyan default
+color attachment yellow default
+
+color header brightyellow default "From: "
+color header brightyellow default "Subject: "
+color header brightyellow default "Date: "
+
+color quoted green default
+color quoted1 cyan default
+color quoted2 green default
+color quoted3 cyan default
+
+color error     red             default         # error messages
+color message   white           default         # message  informational messages
+color indicator white           red             # indicator for the "current message"
+color status    white           blue            # status lines in the folder index sed for the mini-help line
+color tree      red             default         # the "tree" display of threads within the folder index
+color search    white           blue            # search matches found with search within the internal pager
+color markers   red             default         # The markers indicate a wrapped line hen showing messages with looong lines
+
+color index     default default  '~P'
+color index     yellow default  '~O'
+color index     yellow default  '~N'
+color index     brightred       default '~F'    # Flagged Messages are important!
+color index     blue default    '~D'            # Deleted Mails - use dark color as these are already "dealt with"

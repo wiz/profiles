@@ -4,3 +4,4 @@ local
 tags
 tags-*
 /.vim/.netrwhist
+.muttlogin

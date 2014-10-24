@@ -4,8 +4,8 @@ umask 22
 # locale/encoding
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export LC_ALL=ja_JP.UTF-8
-export LANG=ja_JP.UTF-8
+#export LC_ALL=ja_JP.UTF-8
+#export LANG=ja_JP.UTF-8
 
 export ANDROID_HOME=$HOME/Library/Android.SDK
 export GOPATH=$HOME/Development/go
@@ -368,5 +368,8 @@ whois() {
 export GPG_AGENT_INFO
 export SSH_AUTH_SOCK
 export SSH_AGENT_PID
+
+# mutt background fix
+export COLORFGBG="default;default"
 
 # vim:ts=4:sw=4:noexpandtab:foldmethod=marker:nowrap:

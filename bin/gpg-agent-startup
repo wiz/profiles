@@ -1,10 +1,17 @@
+#!/usr/bin/env zsh
+
 # start gpg-agent if not already running
 GPG_AGENT_INFO_FILE=$HOME/.gpg-agent-info
+if [ `uname -s` = 'Darwin' ];then
+	GPG_AGENT_BIN=/usr/local/MacGPG2/bin/gpg-agent
+else
+	GPG_AGENT_BIN=/usr/bin/gpg-agent
+fi
 
 gpg_agent_start()
 {
 	sleep 0.$RANDOM # hack to avoid race condition
-	eval `/usr/local/MacGPG2/bin/gpg-agent --daemon --write-env-file --enable-ssh-support`
+	eval `${GPG_AGENT_BIN} --daemon --write-env-file --enable-ssh-support`
 }
 
 gpg_agent_pid()

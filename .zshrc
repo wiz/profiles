@@ -358,10 +358,10 @@ whois() {
 # }}}
 
 # The next line updates PATH for the Google Cloud SDK.
-#source /Users/jmaurice/google-cloud-sdk/path.bash.inc
+source $HOME/Library/google-cloud-sdk/path.zsh.inc
 
 # The next line enables zsh completion for gcloud.
-#source /Users/jmaurice/google-cloud-sdk/completion.zsh.inc
+source $HOME/Library/google-cloud-sdk/completion.zsh.inc
 
 # connect to gpg key agent
 . ${HOME}/.profiles/bin/gpg-agent-startup

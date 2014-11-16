@@ -9,13 +9,14 @@ set smtp_url = "smtp://j@wiz.biz@smtp.gmail.com:587/"
 # dont save passwords in git
 #set imap_pass = ""
 #set smtp_pass = ""
-source .muttlogin
+source ~/.muttlogin
 
 # IMAP
 set folder = "imaps://imap.gmail.com:993"
 set spoolfile = "+INBOX"
-set postponed ="+[Google Mail]/Drafts"
-set trash = "+[Google Mail]/Trash"
+set postponed ="+[Gmail]/Drafts"
+set mbox="imaps://imap.gmail.com/[Gmail]/All Mail"
+set trash = "+[Gmail]/Trash"
 
 # LOCAL FOLDERS FOR CACHED HEADERS AND CERTIFICATES
 set header_cache =~/.mutt/cache/headers
@@ -28,9 +29,9 @@ set imap_keepalive = 900
 
 bind editor <space> noop
 macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
-macro index ga "<change-folder>=[Google Mail]/All Mail<enter>" "Go to all mail"
-macro index gs "<change-folder>=[Google Mail]/Sent Mail<enter>" "Go to Sent Mail"
-macro index gd "<change-folder>=[Google Mail]/Drafts<enter>" "Go to drafts"
+macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gs "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to Sent Mail"
+macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 
 # Use GPGME
 set crypt_use_gpgme = yes
@@ -76,7 +77,6 @@ color tree      red             default         # the "tree" display of threads 
 color search    white           blue            # search matches found with search within the internal pager
 color markers   red             default         # The markers indicate a wrapped line hen showing messages with looong lines
 
-color index     default default  '~P'
 color index     yellow default  '~O'
 color index     yellow default  '~N'
 color index     brightred       default '~F'    # Flagged Messages are important!

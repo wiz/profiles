@@ -372,4 +372,8 @@ export SSH_AGENT_PID
 # mutt background fix
 export COLORFGBG="default;default"
 
+# bitcoin build
+export BDB_PREFIX=$HOME/Development/db-4.8.30.NC/build_unix/build
+# ./configure CPPFLAGS="-I${BDB_PREFIX}/include/ -O2" LDFLAGS="-L${BDB_PREFIX}/lib/" --with-gui
+
 # vim:ts=4:sw=4:noexpandtab:foldmethod=marker:nowrap:

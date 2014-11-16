@@ -97,8 +97,8 @@ function! s:SetFileEncoding() "{{{
   endif
 endfunction "}}}
 
-call s:SetEncoding()
-call s:SetFileEncodings()
+"call s:SetEncoding()
+"call s:SetFileEncodings()
 autocmd MyAutoCommands BufReadPost * call <SID>SetFileEncoding()
 
 " Address the issue for using □ or ●.

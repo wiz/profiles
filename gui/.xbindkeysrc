@@ -1,0 +1,27 @@
+# increase keyboard backlight brightness
+"brightness-keyboard up"
+  m:0x0 + c:238
+
+# decrease keyboard backlight brightness
+"brightness-keyboard down"
+  m:0x0 + c:237
+
+# increase monitor backlight brightness
+"brightness-display up"
+  m:0x0 + c:233
+
+# decrease monitor backlight brightness
+"brightness-display down"
+  m:0x0 + c:232
+
+# increase volume
+"amixer set Master playback 1+ unmute"
+   XF86AudioRaiseVolume
+
+# decrease volume
+"amixer set Master playback 1-"
+   XF86AudioLowerVolume
+
+# mute volume
+"amixer set Master toggle"
+   XF86AudioMute

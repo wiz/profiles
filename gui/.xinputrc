@@ -1,0 +1,5 @@
+#!/bin/sh
+# set layout
+setxkbmap jp
+# disable caps lock
+setxkbmap -option ctrl:nocaps

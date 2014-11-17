@@ -4,8 +4,13 @@
 setpci -v -H1 -s 00:01.00 BRIDGE_CONTROL=0
 chmod a+w /sys/class/backlight/gmux_backlight/brightness
 echo 300 > /sys/class/backlight/gmux_backlight/brightness
+
 # keyboard backlight
 chmod a+w /sys/devices/platform/applesmc.768/leds/smc\:\:kbd_backlight/brightness
 echo 50 > /sys/devices/platform/applesmc.768/leds/smc\:\:kbd_backlight/brightness
+
+# default audio volumes
+amixer set Headphone 100%
+amixer set Master 10%
 
 exit 0

@@ -17,7 +17,7 @@ theme.wallpaper_cmd = { "" }
 
 
 -- {{{ Styles
-theme.font      = "Terminus 10"
+theme.font      = "Terminus 16"
 
 -- {{{ Colors
 theme.fg_normal = "#DCDCCC"

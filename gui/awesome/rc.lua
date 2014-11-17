@@ -128,7 +128,7 @@ if cpugraph_enable then
 	cpugraph  = awful.widget.graph()
 
 	-- Graph properties
-	cpugraph:set_width(40):set_height(16)
+	cpugraph:set_width(40):set_height(32)
 	cpugraph:set_background_color(beautiful.fg_off_widget)
 	cpugraph:set_gradient_angle(0):set_gradient_colors({
 	   beautiful.fg_end_widget, beautiful.fg_center_widget, beautiful.fg_widget
@@ -187,7 +187,7 @@ if membar_enable then
 	membar = awful.widget.progressbar()
 	-- Pogressbar properties
 	membar:set_vertical(true):set_ticks(true)
-	membar:set_height(16):set_width(8):set_ticks_size(2)
+	membar:set_height(32):set_width(16):set_ticks_size(2)
 	membar:set_background_color(beautiful.fg_off_widget)
 	membar:set_gradient_colors({ beautiful.fg_widget,
 	   beautiful.fg_center_widget, beautiful.fg_end_widget
@@ -210,7 +210,7 @@ fs = {
 -- Progressbar properties
 for _, w in pairs(fs) do
   w:set_vertical(true):set_ticks(true)
-  w:set_height(16):set_width(5):set_ticks_size(2)
+  w:set_height(32):set_width(5):set_ticks_size(2)
   w:set_border_color(beautiful.border_widget)
   w:set_background_color(beautiful.fg_off_widget)
   w:set_gradient_colors({ beautiful.fg_widget,
@@ -262,7 +262,7 @@ volbar    = awful.widget.progressbar()
 volwidget = widget({ type = "textbox" })
 -- Progressbar properties
 volbar:set_vertical(true):set_ticks(true)
-volbar:set_height(16):set_width(8):set_ticks_size(2)
+volbar:set_height(32):set_width(16):set_ticks_size(2)
 volbar:set_background_color(beautiful.fg_off_widget)
 volbar:set_gradient_colors({ beautiful.fg_widget,
    beautiful.fg_center_widget, beautiful.fg_end_widget
@@ -274,8 +274,8 @@ vicious.register(volwidget, vicious.widgets.volume, " $1%", 2, "Master")
 -- Register buttons
 volbar.widget:buttons(awful.util.table.join(
    awful.button({ }, 1, function () exec("kmix") end),
-   awful.button({ }, 4, function () exec("amixer -q set Master 2dB+", false) vicious.force({volbar, volwidget}) end),
-   awful.button({ }, 5, function () exec("amixer -q set Master 2dB-", false) vicious.force({volbar, volwidget}) end)
+   awful.button({ }, 4, function () exec("amixer -q set Master 4dB+", false) vicious.force({volbar, volwidget}) end),
+   awful.button({ }, 5, function () exec("amixer -q set Master 4dB-", false) vicious.force({volbar, volwidget}) end)
 )) -- Register assigned buttons
 volwidget:buttons(volbar.widget:buttons())
 -- }}}
@@ -343,7 +343,7 @@ for s = 1, screen.count() do
     taglist[s] = awful.widget.taglist(s, awful.widget.taglist.label.all, taglist.buttons)
     -- Create the wibox
     wibox[s] = awful.wibox({      screen = s,
-        fg = beautiful.fg_normal, height = 16,
+        fg = beautiful.fg_normal, height = 32,
         bg = beautiful.bg_normal, position = "top",
         border_color = beautiful.border_normal,
         border_width = beautiful.border_width

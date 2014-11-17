@@ -25,4 +25,6 @@ xscreensaver -no-splash &
 setxkbmap jp
 setxkbmap -option ctrl:nocaps
 
+xbindkeys_autostart
+
 exec ck-launch-session dbus-launch awesome 2>&1 > $HOME/.xsession-errors

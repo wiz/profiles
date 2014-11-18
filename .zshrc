@@ -364,10 +364,12 @@ source $HOME/Library/google-cloud-sdk/path.zsh.inc
 source $HOME/Library/google-cloud-sdk/completion.zsh.inc
 
 # connect to gpg key agent
-. ${HOME}/.profiles/bin/gpg-agent-startup
-export GPG_AGENT_INFO
-export SSH_AUTH_SOCK
-export SSH_AGENT_PID
+if [ `tty` != '/dev/ttyv0' ];then
+	. ${HOME}/.profiles/bin/gpg-agent-startup
+	export GPG_AGENT_INFO
+	export SSH_AUTH_SOCK
+	export SSH_AGENT_PID
+fi
 
 # mutt background fix
 export COLORFGBG="default;default"
@@ -375,5 +377,7 @@ export COLORFGBG="default;default"
 # bitcoin build
 export BDB_PREFIX=$HOME/Development/db-4.8.30.NC/build_unix/build
 # ./configure CPPFLAGS="-I${BDB_PREFIX}/include/ -O2" LDFLAGS="-L${BDB_PREFIX}/lib/" --with-gui
+
+alias chr="chromium-browser --force-device-scale-factor"
 
 # vim:ts=4:sw=4:noexpandtab:foldmethod=marker:nowrap:

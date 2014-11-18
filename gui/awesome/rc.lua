@@ -449,9 +449,19 @@ globalkeys = awful.util.table.join(
               end)
 )
 
+-- clipboard remap hack
+clipboard_copy  = "/usr/bin/xsel --output | /usr/bin/xsel --input --clipboard"
+clipboard_paste	= "/usr/bin/xsel --output --clipboard | xvkbd -xsendevent -file - 2>/dev/null"
+
 clientkeys = awful.util.table.join(
     awful.key({ modkey,           }, "f",      function (c) c.fullscreen = not c.fullscreen  end),
-    awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end),
+
+    awful.key({ modkey,           }, "c",      function () awful.util.spawn_with_shell(clipboard_copy)  end),
+    awful.key({ modkey,           }, "v",      function () awful.util.spawn_with_shell(clipboard_paste) end),
+    awful.key({ modkey, "Shift"   }, "c",      function () awful.util.spawn_with_shell(clipboard_copy)  end),
+    awful.key({ modkey, "Shift"   }, "v",      function () awful.util.spawn_with_shell(clipboard_paste) end),
+
+    awful.key({ modkey, "Shift"   }, "q",      function (c) c:kill()                         end),
     awful.key({ modkey,           }, "t",  awful.client.floating.toggle                     ),
     awful.key({ modkey, "Shift" }, "t", function (c)
         if   c.titlebar then awful.titlebar.remove(c)

@@ -11,7 +11,7 @@ fi
 gpg_agent_start()
 {
 	sleep 0.$RANDOM # hack to avoid race condition
-	eval `${GPG_AGENT_BIN} --daemon --write-env-file --enable-ssh-support --pinentry-program=/usr/bin/pinentry-x11`
+	eval `${GPG_AGENT_BIN} --daemon --write-env-file --enable-ssh-support --pinentry-program=/usr/bin/pinentry`
 }
 
 gpg_agent_pid()

@@ -29,8 +29,12 @@ setxkbmap -option ctrl:nocaps
 
 xbindkeys_autostart
 
+xfsettingsd &
+
 nm-applet &
 
-#kmix &
+kmix &
+
+touchegg &
 
 exec ck-launch-session dbus-launch awesome 2>&1 > $HOME/.xsession-errors

@@ -1,17 +1,17 @@
 # increase keyboard backlight brightness
-"brightness-keyboard up"
+"$HOME/.profiles/bin/brightness-keyboard up"
   m:0x0 + c:238
 
 # decrease keyboard backlight brightness
-"brightness-keyboard down"
+"$HOME/.profiles/bin/brightness-keyboard down"
   m:0x0 + c:237
 
 # increase monitor backlight brightness
-"brightness-display up"
+"$HOME/.profiles/bin/brightness-display up"
   m:0x0 + c:233
 
 # decrease monitor backlight brightness
-"brightness-display down"
+"$HOME/.profiles/bin/brightness-display down"
   m:0x0 + c:232
 
 # increase volume

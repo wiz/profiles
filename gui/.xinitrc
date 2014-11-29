@@ -37,4 +37,6 @@ kmix &
 
 touchegg &
 
+ibus-daemon --daemonize --xim
+
 exec ck-launch-session dbus-launch awesome 2>&1 > $HOME/.xsession-errors

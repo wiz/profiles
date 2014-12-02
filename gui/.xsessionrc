@@ -1,0 +1,26 @@
+#!/usr/bin/env zsh
+
+setxkbmap jp
+setxkbmap -option ctrl:nocaps
+
+xbindkeys_autostart
+
+xfsettingsd &
+
+# transparency
+xcompmgr &
+
+# network manager widget
+nm-applet &
+
+# sound widget
+kmix &
+
+# multi-touch trackpad gestures
+touchegg &
+
+# japanese ime
+ibus-daemon --daemonize --xim
+
+# start awesome wm
+exec ck-launch-session dbus-launch awesome 2>&1 > $HOME/.xsession-errors

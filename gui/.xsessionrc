@@ -5,6 +5,7 @@ setxkbmap -option ctrl:nocaps
 
 xbindkeys_autostart
 
+# load settings
 xfsettingsd &
 
 # transparency
@@ -20,7 +21,10 @@ kmix &
 touchegg &
 
 # japanese ime
-ibus-daemon --daemonize --xim
+(sleep 5 ; ibus-daemon --daemonize --xim) &
+
+# power management
+xfce4-power-manager &
 
 # start awesome wm
 exec ck-launch-session dbus-launch awesome 2>&1 > $HOME/.xsession-errors

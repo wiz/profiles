@@ -1,0 +1,72 @@
+#!/bin/sh
+
+echo hello|wall
+
+case $1 in
+	resume|thaw)
+		synclient FingerLow=40
+		synclient FingerHigh=100
+		synclient MaxTapTime=180
+		synclient MaxTapMove=535
+		synclient MaxDoubleTapTime=180
+		synclient SingleTapTimeout=180
+		synclient ClickTime=100
+		synclient EmulateMidButtonTime=0
+		synclient EmulateTwoFingerMinZ=283
+		synclient EmulateTwoFingerMinW=7
+		synclient VertScrollDelta=-111
+		synclient HorizScrollDelta=-111
+		synclient VertEdgeScroll=0
+		synclient HorizEdgeScroll=0
+		synclient CornerCoasting=0
+		synclient VertTwoFingerScroll=1
+		synclient HorizTwoFingerScroll=1
+		synclient MinSpeed=1
+		synclient MaxSpeed=1.75
+		synclient AccelFactor=0.0164447
+		synclient TouchpadOff=0
+		synclient LockedDrags=0
+		synclient LockedDragTimeout=5000
+		synclient RTCornerButton=2
+		synclient RBCornerButton=3
+		synclient LTCornerButton=0
+		synclient LBCornerButton=0
+		synclient TapButton1=1
+		synclient TapButton2=3
+		synclient TapButton3=0
+		synclient ClickFinger1=1
+		synclient ClickFinger2=3
+		synclient ClickFinger3=0
+		synclient CircularScrolling=0
+		synclient CircScrollDelta=0.1
+		synclient CircScrollTrigger=0
+		synclient CircularPad=0
+		synclient PalmDetect=0
+		synclient PalmMinWidth=10
+		synclient PalmMinZ=200
+		synclient CoastingSpeed=0
+		synclient CoastingFriction=50
+		synclient PressureMotionMinZ=30
+		synclient PressureMotionMaxZ=160
+		synclient PressureMotionMinFactor=1
+		synclient PressureMotionMaxFactor=1
+		synclient ResolutionDetect=1
+		synclient GrabEventDevice=1
+		synclient TapAndDragGesture=1
+		synclient AreaLeftEdge=0
+		synclient AreaRightEdge=0
+		synclient AreaTopEdge=0
+		synclient AreaBottomEdge=0
+		synclient HorizHysteresis=40
+		synclient VertHysteresis=27
+		synclient ClickPad=1
+		synclient RightButtonAreaLeft=0
+		synclient RightButtonAreaRight=0
+		synclient RightButtonAreaTop=0
+		synclient RightButtonAreaBottom=0
+		synclient MiddleButtonAreaLeft=0
+		synclient MiddleButtonAreaRight=0
+		synclient MiddleButtonAreaTop=0
+		synclient MiddleButtonAreaBottom=0
+	;;
+esac

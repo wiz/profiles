@@ -7,8 +7,15 @@ export LANG=en_US.UTF-8
 #export LC_ALL=ja_JP.UTF-8
 #export LANG=ja_JP.UTF-8
 
-export ANDROID_HOME=$HOME/Library/Android.SDK
 export GOPATH=$HOME/Development/go
+
+export ANDROID_HOME=$HOME/Library/Android.SDK
+
+export GRADLE_HOME=/usr/local/apache-maven/gradle-2.2.1
+export PATH=$PATH:$GRADLE_HOME/bin
+
+export MAVEN_HOME=/usr/local/apache-maven/apache-maven-3.2.5
+export PATH=$PATH:$MAVEN_HOME/bin
 
 # go for 256 color as long as not physical console
 [ `tty` != '/dev/ttyv0' ] && export TERM=xterm-256color

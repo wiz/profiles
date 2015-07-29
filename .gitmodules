@@ -64,3 +64,6 @@
 [submodule ".vim/bundle/treetop.vim"]
 	path = .vim/bundle/treetop.vim
 	url = https://github.com/nanki/treetop.vim.git
+[submodule ".vim/bundle/vim-go"]
+	path = .vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go

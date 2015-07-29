@@ -53,14 +53,14 @@ set crypt_replysignencrypted = yes
 set crypt_verify_sig = yes
 
 # autosign all mail using my key
-set pgp_sign_as = 0x750C1AC5
+set pgp_sign_as = 0x0FE40A5B
 set crypt_autosign = yes
 set crypt_autoencrypt = yes
 # add header to my key
 my_hdr X-PGP-Key: https://wiz.biz/pgp/jmaurice.asc
 
 # forward with attachments
-set mime_forward = yes
+set mime_forward = no
 
 # main options
 set mail_check = 0
@@ -77,7 +77,7 @@ set strict_threads = yes
 set collapse_unread = yes
 bind index - collapse-thread
 bind index _ collapse-all
-folder-hook . "exec collapse-all"
+#folder-hook . "exec collapse-all"
 
 # look and feel
 set pager_index_lines = 8
@@ -90,7 +90,7 @@ unset markers
 
 # composing 
 set fcc_attach
-unset mime_forward
+#unset mime_forward
 set forward_format = "Fwd: %s"
 set include
 set forward_quote

@@ -17,6 +17,9 @@ export PATH=$PATH:$GRADLE_HOME/bin
 export MAVEN_HOME=/usr/local/apache-maven/apache-maven-3.2.5
 export PATH=$PATH:$MAVEN_HOME/bin
 
+export ECLIPSE_HOME=/usr/local/eclipse
+export PATH=$PATH:$ECLIPSE_HOME
+
 # go for 256 color as long as not physical console
 [ `tty` != '/dev/ttyv0' ] && export TERM=xterm-256color
 
@@ -385,6 +388,6 @@ export COLORFGBG="default;default"
 export BDB_PREFIX=$HOME/Development/db-4.8.30.NC/build_unix/build
 # ./configure CPPFLAGS="-I${BDB_PREFIX}/include/ -O2" LDFLAGS="-L${BDB_PREFIX}/lib/" --with-gui
 
-alias chr="chromium-browser --force-device-scale-factor"
+alias gpg=gpg2
 
 # vim:ts=4:sw=4:noexpandtab:foldmethod=marker:nowrap:

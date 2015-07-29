@@ -1,6 +1,6 @@
 #!/bin/bash
 kbdb='/sys/devices/platform/applesmc.768/leds/smc::kbd_backlight/brightness'
-step=25
+step=5
 current=`cat $kbdb`
 new=$current
 if [ "$1" == "up" ];then

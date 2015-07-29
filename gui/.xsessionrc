@@ -15,13 +15,13 @@ xcompmgr &
 nm-applet &
 
 # sound widget
-kmix &
+#kmix &
 
 # multi-touch trackpad gestures
 touchegg &
 
 # japanese ime
-(sleep 5 ; ibus-daemon --daemonize --xim) &
+ibus-daemon --daemonize --xim &
 
 # power management
 xfce4-power-manager &

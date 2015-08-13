@@ -1,0 +1,15 @@
+[roxterm profile]
+colour_scheme=Default
+font=Monospace 12
+saturation=0.326000
+hide_menubar=1
+always_show_tabs=0
+scrollbar_pos=0
+scrollback_lines=99999
+scroll_on_keystroke=1
+show_resize_grip=0
+scroll_background=0
+maximise=0
+show_add_tab_btn=0
+full_screen=0
+cursor_blink_mode=2

@@ -9,11 +9,19 @@ set smtp_url = "smtp://j@wiz.biz@smtp.gmail.com:587/"
 # always TLS
 set ssl_starttls=yes
 set ssl_force_tls=yes
+# SSL hardening
+set ssl_use_sslv2=no
+set ssl_use_sslv3=no
+set ssl_use_tlsv1=no
+set ssl_use_tlsv1_1=no
+set ssl_use_tlsv1_2=yes
+set ssl_verify_dates=yes
+set ssl_verify_host=yes
 
 # dont save passwords in git
 #set imap_pass = ""
 #set smtp_pass = ""
-source ~/.muttlogin
+source "gpg2 -d ~/.muttlogin |"
 
 # IMAP
 set folder = "imaps://imap.gmail.com:993"
@@ -25,6 +33,7 @@ set trash = "+[Gmail]/Trash"
 # LOCAL FOLDERS FOR CACHED HEADERS AND CERTIFICATES
 set header_cache =~/.mutt/cache/headers
 set message_cachedir =~/.mutt/cache/bodies
+unset ssl_usesystemcerts
 set certificate_file =~/.mutt/certificates
 
 # SECURING

@@ -1,4 +1,4 @@
 #!/usr/bin/env zsh
 export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 #gpgconf --launch gpg-agent
-gpg-agent --use-standard-socket --daemon --pinentry-program=/usr/local/bin/pinentry
+gpg-agent --use-standard-socket --daemon --pinentry-program=/usr/local/bin/pinentry-gtk-2

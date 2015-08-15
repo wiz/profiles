@@ -23,9 +23,6 @@ export PATH=$PATH:$ECLIPSE_HOME
 # go for 256 color as long as not physical console
 [ `tty` != '/dev/ttyv0' ] && export TERM=xterm-256color
 
-# timezone
-export TZ=Asia/Tokyo
-
 # location of our git repo
 profiles=~/.profiles
 

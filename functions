@@ -50,13 +50,17 @@ init_paths() {
 		if [ -d "$gcloud_platform_path" ];then
 			PATH=$gcloud_platform_path/bin/:$PATH
 		fi
-		local android_platform_path=$HOME/Library/Android.SDK/platform-tools
-		if [ -d "$android_platform_path" ];then
-			PATH=$android_platform_path:$PATH
+		local android_sdk_platform_path=$HOME/Library/Android/sdk/platform-tools
+		if [ -d "$android_sdk_platform_path" ];then
+			PATH=$android_sdk_platform_path:$PATH
 		fi
-		local android_tools_path=$HOME/Library/Android.SDK/tools
-		if [ -d "$android_tools_path" ];then
-			PATH=$android_tools_path:$PATH
+		local android_sdk_tools_path=$HOME/Library/Android/sdk/tools
+		if [ -d "$android_sdk_tools_path" ];then
+			PATH=$android_sdk_tools_path:$PATH
+		fi
+		local android_ndk_platform_path=$HOME/Library/Android/ndk
+		if [ -d "$android_ndk_platform_path" ];then
+			PATH=$android_ndk_platform_path:$PATH
 		fi
 		local man_path="$i/share/man"
 		if [ -d "$man_path" ]; then

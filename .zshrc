@@ -387,9 +387,8 @@ export BDB_PREFIX=$HOME/Development/db-4.8.30.NC/build_unix/build
 
 alias gpg=gpg2
 
-export PATH=$PATH:$HOME/.gvp/bin:$HOME/.gpm/bin:$HOME/.gpm-bootstrap/bin:$HOME/.gpm-git:$HOME/.gpm-local
-
-source $HOME/.gvm/scripts/gvm
-gvm use go1.4
+#export PATH=$PATH:$HOME/.gvp/bin:$HOME/.gpm/bin:$HOME/.gpm-bootstrap/bin:$HOME/.gpm-git:$HOME/.gpm-local
+#source $HOME/.gvm/scripts/gvm
+#gvm use go1.4
 
 # vim:ts=4:sw=4:noexpandtab:foldmethod=marker:nowrap:

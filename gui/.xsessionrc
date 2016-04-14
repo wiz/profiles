@@ -8,8 +8,11 @@ xbindkeys_autostart
 # load settings
 xfsettingsd &
 
+# vmware
+vmware-user-suid-wrapper
+
 # transparency
-xcompmgr &
+compton &
 
 # network manager widget
 nm-applet &
@@ -18,13 +21,13 @@ nm-applet &
 #kmix &
 
 # multi-touch trackpad gestures
-touchegg &
+#touchegg &
 
 # japanese ime
 ibus-daemon --daemonize --xim &
 
 # power management
-xfce4-power-manager &
+#xfce4-power-manager &
 
 # start awesome wm
 exec ck-launch-session dbus-launch awesome 2>&1 > $HOME/.xsession-errors

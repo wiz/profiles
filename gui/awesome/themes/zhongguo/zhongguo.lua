@@ -17,7 +17,7 @@ theme.wallpaper_cmd = { "" }
 
 
 -- {{{ Styles
-theme.font      = "Terminus 16"
+theme.font      = "Liberation Mono 20"
 
 -- {{{ Colors
 theme.fg_normal = "#DCDCCC"
@@ -29,7 +29,7 @@ theme.bg_urgent = theme.bg_normal
 -- }}}
 
 -- {{{ Borders
-theme.border_width  = 1
+theme.border_width  = 0
 theme.border_focus  = "#8E2323"
 theme.border_normal = "#333333"
 

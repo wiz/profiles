@@ -3,7 +3,7 @@
 gpg_agent_start()
 {
 	#sleep 0.$RANDOM # hack to avoid race condition that starts many gpg-agent processes
-	eval `${GPG_AGENT_BIN} --daemon --write-env-file --use-standard-socket --enable-ssh-support --pinentry-program=${GPG_PINENTRY_PROGRAM}`
+	eval `${GPG_AGENT_BIN} --daemon --enable-ssh-support --pinentry-program=${GPG_PINENTRY_PROGRAM}`
 }
 
 gpg_agent_pid()

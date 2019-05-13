@@ -15,7 +15,7 @@ gpg_agent_pid()
 case `uname -s` in
 	Darwin)
 		GPG_PINENTRY_PROGRAM=`which pinentry-mac`
-		GPG_AGENT_BIN==`which gpg-agent`
+		GPG_AGENT_BIN=`which gpg-agent`
 		GPG_AGENT_INFO_FILE=$HOME/.gpg-agent-info
 		gpg_agent_start
 		SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh

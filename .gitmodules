@@ -54,7 +54,7 @@
 	url = https://github.com/tyru/open-browser.vim.git
 [submodule "zsh-git"]
 	path = zsh-git
-	url = https://github.com/jmaurice/zsh-git
+	url = https://github.com/wiz/zsh-git
 [submodule ".vim/bundle/mustache.vim"]
 	path = .vim/bundle/mustache.vim
 	url = https://github.com/juvenn/mustache.vim.git
